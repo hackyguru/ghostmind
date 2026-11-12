@@ -12,7 +12,7 @@ Basecamp:
 | Paying without anyone knowing | **Private → private LGO transfers** on LEZ. The chain shows no sender, no recipient and no amount. |
 
 ```
-part18-ghostmind/
+ghostmind/
 ├── ghostmind-program/  the registry (Rust → risc0 guest), build.sh, ghostmind.bin
 ├── ghostmind-core/     ghostmind_core — universal C++ module: LEZ wallet FFI + delivery_module + libsodium
 │   ├── src/ghostmind_codec.h   hand-written Borsh, PDA seeds, SHA-256, LGO amounts

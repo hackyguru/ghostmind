@@ -1,0 +1,19 @@
+{
+  "name": "ghostmind_core",
+  "version": "0.1.0",
+  "type": "core",
+  "interface": "universal",
+  "category": "communication",
+  "description": "Ghostmind core — anonymous therapy on Logos: a verified-therapist registry and ticketed reputation on the Logos Execution Zone, end-to-end encrypted conversations over logos-delivery, and private LGO payments",
+  "codegen": {
+    "impl_header": "src/ghostmind_impl.h",
+    "impl_class": "GhostmindImpl"
+  },
+  "main": "ghostmind_core_plugin",
+  "dependencies": ["delivery_module"],
+  "nix": {
+    "packages": { "build": ["pkg-config"], "runtime": ["nlohmann_json", "libsodium"] },
+    "external_libraries": [ { "name": "wallet_ffi" } ],
+    "cmake": { "find_packages": [], "extra_sources": [], "extra_include_dirs": [], "extra_link_libraries": [] }
+  }
+}

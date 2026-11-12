@@ -1,0 +1,20 @@
+[package]
+name = "ghostmind"
+version = "0.1.0"
+edition = "2024"
+
+# A risc0 guest: built with build.sh (local risc0 toolchain), never `cargo build`.
+[dependencies]
+borsh = { version = "1", features = ["derive"] }
+# LEZ v0.3.1 — what the public testnet runs since its ~Oct 13 2026 reset, and
+# the same commit ghostmind-core's wallet FFI is built from.
+lee_core = { git = "https://github.com/logos-blockchain/logos-execution-zone", tag = "v0.3.1" }
+risc0-zkvm = { version = "=3.0.5", default-features = false, features = ["std"] }
+
+[workspace]
+members = ["."]
+exclude = ["build-local"]
+
+[profile.release]
+lto = true
+opt-level = 3

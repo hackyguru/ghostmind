@@ -1,0 +1,16 @@
+{
+  "name": "ghostmind",
+  "displayName": "Ghostmind",
+  "version": "0.1.0",
+  "type": "ui_qml",
+  "category": "communication",
+  "description": "Ghostmind — anonymous therapy on Logos: find a verified therapist, talk over encrypted Logos messaging, pay privately on the Logos Execution Zone, rate from an unlinked account",
+  "view": "Main.qml",
+  "icon": "icons/ghostmind.png",
+  "dependencies": ["ghostmind_core"],
+  "nix": {
+    "packages": { "build": [], "runtime": [] },
+    "external_libraries": [],
+    "cmake": { "find_packages": [], "extra_sources": [], "extra_include_dirs": [], "extra_link_libraries": [] }
+  }
+}

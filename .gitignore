@@ -1,0 +1,6 @@
+result*
+ghostmind-core/tests/harness
+ghostmind-core/build.log
+ghostmind-program/target/
+ghostmind-program/build.log
+ghostmind-program/build-local/target/

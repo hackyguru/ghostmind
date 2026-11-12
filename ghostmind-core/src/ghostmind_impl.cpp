@@ -148,10 +148,10 @@ uint64_t parseDate(const std::string& iso)
     return v > 0 ? uint64_t(v) : 0;
 }
 
-std::string formatDate(uint64_t unix)
+std::string formatDate(uint64_t secs)
 {
-    if (!unix) return "";
-    const time_t t = time_t(unix);
+    if (!secs) return "";
+    const time_t t = time_t(secs);
     std::tm tm{};
     gmtime_r(&t, &tm);
     char buf[16];
